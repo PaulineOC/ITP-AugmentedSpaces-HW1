@@ -78,10 +78,6 @@ class SimpleARView: ARView {
         "Man4.png",
         "Man5.png",
         "Man7.png",
-        "Sitting1.png",
-        "Sitting2.png",
-        "Sitting3.png",
-        "Sitting4.png",
         "Woman2.png",
         "Woman3.png",
         "Woman5.png",
@@ -146,7 +142,7 @@ class SimpleARView: ARView {
     
     func addImagePlane() {
         
-        textureIdx = Int.random(in: 0..<17)
+        textureIdx = Int.random(in: 0..<13)
         print(textureIdx)
         let textureName = textures[textureIdx]
         
@@ -175,7 +171,7 @@ class SimpleARView: ARView {
                                   * float4x4(translation: [0.0, 0.0, -0.5])
 
         // Scale entity by 0.25
-        entity.scale = SIMD3(repeating: 0.65)
+        entity.scale = SIMD3(repeating: 0.7)
 
         // Add entity to scene.
         originAnchor.addChild(entity)
